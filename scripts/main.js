@@ -1,7 +1,21 @@
 const headerAdvice=document.querySelector('.advicetest');
 
 
-let test=fetch('https://api.adviceslip.com/advice').then(resp=>{console.log(resp)});
+const url = 'https://api.adviceslip.com/advice';
 
 
-console.log(test)
+// Get Random
+const getAdvice = async () => {
+  get('spin').style.display = 'inline-block';
+  try {
+    const res = await fetch(url);
+    const data = await res.json(); 
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+const ok=getAdvice();
+
+console.log(ok.data.slip)
