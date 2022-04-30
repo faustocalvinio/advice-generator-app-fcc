@@ -13,7 +13,7 @@ const getAdvice=async()=>{
     idAdvice.innerHTML=answerId;
     headerAdvice.innerHTML=answerAdvice;
   } catch (err){
-    console.log(err)
+    console.log(`Something went wrong! ${err}`)
   }
 };
 
