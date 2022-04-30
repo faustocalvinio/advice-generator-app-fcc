@@ -1,21 +1,22 @@
-const headerAdvice=document.querySelector('.advicetest');
-
+const idAdvice=document.querySelector('#advice-number');
+const headerAdvice=document.querySelector('#advice-content');
+const diceButton=document.querySelector('.dice-cont')
 
 const url = 'https://api.adviceslip.com/advice';
 
-
-// Get Random
-const getAdvice = async () => {
-  get('spin').style.display = 'inline-block';
-  try {
-    const res = await fetch(url);
-    const data = await res.json(); 
-    return data;
-  } catch (err) {
-    console.log(err);
+const getAdvice=async()=>{
+  try{
+    const resp=await fetch(url);
+    const data=await resp.json();
+    const answerId=data.slip.id;
+    const answerAdvice=data.slip.advice;
+    idAdvice.innerHTML=answerId;
+    headerAdvice.innerHTML=answerAdvice;
+  } catch (err){
+    console.log(err)
   }
-}
+};
 
-const ok=getAdvice();
+getAdvice();
 
-console.log(ok.data.slip)
+diceButton.addEventListener('click',getAdvice);

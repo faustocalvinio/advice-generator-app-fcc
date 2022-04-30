@@ -1,0 +1,56 @@
+:root{
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+    --grayishBlue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--darkBlue);
+    overflow: hidden;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 24rem;
+    padding: 4rem;
+    background-color: var(--darkGrayishBlue);
+    text-align: center;
+    position: relative;
+}
+.dice-cont{
+    width: 1.5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 87%;
+    background-color:var(--neonGreen);
+    border: 1rem solid var(--neonGreen);
+    border-radius: 2rem;
+    cursor: pointer;    
+}
+.dice-cont:hover{
+    box-shadow: 0 0 2rem hsla(150, 100%, 65%, 0.785);
+}
+.advice-id{
+    color: var(--neonGreen);
+    letter-spacing: .1rem;
+}
+.advice-text{
+    color: var(--lightCyan);
+}
+.attribution{
+    color: white;
+    position: absolute;
+    top: 85%;
+    left: 3%;
+}
