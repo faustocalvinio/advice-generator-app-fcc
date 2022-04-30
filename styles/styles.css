@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
+
 :root{
     --lightCyan: hsl(193, 38%, 86%);
     --neonGreen: hsl(150, 100%, 66%);
@@ -20,11 +22,12 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 24rem;
-    padding: 4rem;
+    width: 26rem;
+    padding: 2rem;
     background-color: var(--darkGrayishBlue);
     text-align: center;
     position: relative;
+    border-radius: 1rem;
 }
 .dice-cont{
     width: 1.5rem;
@@ -32,7 +35,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 87%;
+    top: 91%;
     background-color:var(--neonGreen);
     border: 1rem solid var(--neonGreen);
     border-radius: 2rem;
@@ -44,9 +47,17 @@ body{
 .advice-id{
     color: var(--neonGreen);
     letter-spacing: .1rem;
+    font-weight: 600;
+    margin: 0;
 }
 .advice-text{
     color: var(--lightCyan);
+    font-family: 'Manrope',sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+}
+.pattern-divider{
+    margin: 1rem 0 2rem;
 }
 .attribution{
     color: white;
