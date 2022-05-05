@@ -25,11 +25,12 @@ body{
     align-items: center;
     justify-content: center;
     width: 24rem;
-    padding: 4.5rem;
+    padding: 3rem 4rem;
     background-color: var(--darkGrayishBlue);
     text-align: center;
     position: relative;
     border-radius: 1rem;
+    box-shadow: 0rem 5rem 4rem var(--grayishBlue);
 }
 .dice-cont{
     width: 1.5rem;
